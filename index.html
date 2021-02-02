@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html class="dark">
+  <head>
+    <meta charet="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Netflix</title>
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" >
+    <script src="assets/js/main.js" type="text/javascript"></script> 
+
+    
+  </head>
+
+  <body class="bg-black"> 
+       
+    <header class="text-white fixed top-0 bg-gradient-to-b from-black w-full z-50">
+        <div class="px-12 flex flex-wrap p-5 flex-col xl:flex-row items-center">
+            <a class="flex items-center mb-4 md:mb-0">
+                <img src="https://assets.nflxext.com/en_us/layout/ecweb/common/logo-shadow2x.png" class="w-24 cursor-pointer" alt="">
+            </a>
+            <div class="hidden xl:flex flex-row space-x-6 w-1/2 ml-10 text-sm font-light">
+                <p class="font-bold cursor-pointer shadow">Home</p>
+                <p class="hover:font-bold cursor-pointer hover:shadow-lg">TV Shows</p>
+                <p class="hover:font-bold cursor-pointer hover:shadow-lg">Movies</p>
+                <p class="hover:font-bold cursor-pointer hover:shadow-lg">New & Popular</p>
+                <p class="hover:font-bold cursor-pointer hover:shadow-lg">My list</p>
+                <p class="hover:font-bold cursor-pointer hover:shadow-lg">Watch Again</p>
+
+            </div>
+
+            <nav class="md:ml-auto hidden xl:flex flex-wrap space-x-8 items-center text-base justify-center font-semibold">
+                <i class="fas fa-search text-xl cursor-pointer"></i>
+                <i class="fas fa-gift text-xl cursor-pointer"></i>
+                <i class="fas fa-bell text-xl cursor-pointer"></i>
+                <button class="flex items-center">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/e70b1333850498.56ba69ac32ae3.png" alt="" class="w-8 h-8 rounded">
+                    <svg class="w-5 h-5 stroke-current text-white ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </nav>
+        </div>
+    </header>  
+
+    <div class="h-screen">
+        <div class="absolute h-full z-10 ">
+            <div class="px-16 h-full flex items-center justify-start"> 
+                <div class="flex flex-col xl:w-2/6 lg:w-2/6 md:w-3/6 sm:w-3/6 space-y-2 py-12 ">
+                    
+                    <img src="https://fanart.tv/fanart/tv/323168/hdtvlogo/13-reasons-why-5888f5cfd8122.png" alt="" class="-ml-4">
+                    <p class="text-lg text-white text-justify ">It's a series where teens watch videos to find out if they are responsible for suicide, it seems it's nice the series is starting 
+                        to last too long according to the critics I would see it one of these four (not at all, I'm going to watch the office for the 14th time)
+                    </p>
+                    
+                    <div class="flex space-x-4 flex-row w-full">
+                        <button class="px-8 mt-5 items-center shadow-md rounded-lg bg-white  space-x-2 py-2 justify-center flex">
+                            <i class="fas fa-play"></i>
+                            <span class="text-gray-800 font-semibold">Play</span>
+                        </button>
+                        <button class=" px-8 mt-5 items-center shadow-md rounded-lg bg-gray-800 bg-opacity-50 space-x-2 py-2 justify-center flex">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="text-white font-semibold">More Info</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute w-full h-48 bottom-0 bg-gradient-to-t from-black"></div>
+        <img src="http://screenrant.com/wp-content/uploads/2017/04/13-Reasons-Why-Hannah-Baker-Poster.jpg" class="w-full h-screen object-cover -mt-2">
+
+                    
+    </div>
+
+    <section class="text-white">
+      <!-- catalog -->
+      
+      <div class="pl-16 py-10">
+          <p class="py-2 font-semibold text-xl">My List</p>
+          <div class="flex items-center relative">
+
+              <!-- arrow left -->
+              <div class="absolute left-0 left-arrow">
+                  <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+              </div>
+
+              <div class="container-carousel">
+                  <div class="carousel grid gap-2">
+                          <div class="pics">
+                              <a href="#"><img src="https://news.otakukart.com/wp-content/uploads/2019/04/Our-Planet-1068x601.jpg" alt="" class="rounded"></a>
+                          </div>
+
+                          <div class="pics">
+                              <a href="#"><img src="https://occ-0-1722-1723.1.nflxso.net/dnm/api/v6/0DW6CdE4gYtYx8iy3aj8gs9WtXE/AAAABa7oTWxJ7Q3Uxw2MB6YaezDh1ptGEytooqLcw-D1_6dkOHMDzTqS5PdukLq71ZesXFJ0QpKf6lF_LeUremk3X2GiEoi1m6ezsvEFnsj9qzxrLt6R6jfpFzdMPEZvpA.jpg?r=95e" alt="" class="rounded"></a>
+                          </div>
+
+                          <div class="pics">
+                              <a href="#"><img src="https://i.ytimg.com/vi/xiX9gv7hw5M/maxresdefault.jpg" alt="" class="rounded"></a>
+                          </div>
+
+                          <div class="pics">
+                              <a href="#"><img src="assets/img/blackmirror.png" alt="" class="rounded"></a>
+                          </div>
+
+                          <div class="pics">
+                              <a href="#"><img src="https://leffetpopculture.files.wordpress.com/2018/08/en-bref.jpg?w=530&h=298" alt="" class="rounded"></a>
+                          </div>
+
+                          <div class="pics">
+                              <a href="#"><img src="https://www.purefandom.com/wp-content/uploads/2018/11/dark2.jpg" alt="" class="rounded"></a>
+                          </div>
+
+                          <div class="pics">
+                              <a href="#"><img src="https://www.thedigitalhash.com/wp-content/uploads/2018/03/icarus-th-1.jpg" alt="" class="rounded"></a>
+                          </div>
+
+                          <div class="pics">
+                              <a href="#"><img src="https://media1.fdncms.com/orlando/imager/with-american-sniper-clint-eastwood-may/u/original/2338101/film_4-1.jpg" alt="" class="rounded"></a>
+                          </div>
+
+                          <div class="pics">
+                              <a href="#"><img src="https://occ-0-768-769.1.nflxso.net/dnm/api/v6/0DW6CdE4gYtYx8iy3aj8gs9WtXE/AAAABXUZZt2iv_qarUt6PlKT_efLO1ULEdc2A8ClU8JimTFfGQLJpvGBhy7rwYtplAXbstOKqSw_BbVtw2XtEDZw0qR3mJ05.jpg?r=901" alt="" class="rounded"></a>
+                          </div>
+
+                          <div class="pics">
+                              <a href="#"><img src="https://assets1.ignimgs.com/2020/04/02/joe-exotic-tiger-king-1585833589671.jpg?width=1280" alt="" class="rounded"></a>
+                          </div>
+                      </div> 
+              </div>
+
+              <!-- arrow right -->
+              <div class="absolute right-0 right-arrow">
+                  <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+              </div>
+
+          </div>
+
+      </div>  
+      
+      <div class="pl-16 py-8">
+        <p class="py-2 font-semibold text-xl">TV Shows</p>
+        <div class="flex items-center relative">
+
+            <!-- arrow left -->
+            <div class="absolute left-0">
+                <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+            </div>
+
+            <div class="container-carousel">
+                <div class="carousel grid gap-2">
+                        <div class="pics">
+                            <a href="#"><img src="assets/img/peakyblinders.png" alt="" class="rounded"></a>
+                        </div>
+
+                        <div class="pics">
+                            <a href="#"><img src="assets/img/vikings.png" alt="" class="rounded"></a>
+                        </div>
+
+                        <div class="pics">
+                            <a href="#"><img src="https://imgix.bustle.com/inverse/8d/2e/cc/37/6ca2/41c7/81cc/8c9a28f2dfbc/cumberbatch-holmesjpg.jpeg?w=1200&h=630&q=70&fit=crop&crop=faces&fm=jpg" alt="" class="rounded"></a>
+                        </div>
+
+                        <div class="pics">
+                            <a href="#"><img src="assets/img/orangeisthenewblack.png" alt="" class="rounded"></a>
+                        </div>
+
+                        <div class="pics">
+                            <a href="#"><img src="assets/img/thewitcher.png" alt="" class="rounded"></a>
+                        </div>
+
+                        <div class="pics">
+                            <a href="#"><img src="assets/img/theumbrellaacademy.png" alt="" class="rounded"></a>
+                        </div>
+
+                        <div class="pics">
+                            <a href="#"><img src="assets/img/thequeensgambit.png" alt="" class="rounded"></a>
+                        </div>
+
+                        <div class="pics">
+                            <a href="#"><img src="assets/img/outlander.png" alt="" class="rounded"></a>
+                        </div>
+
+                        <div class="pics">
+                            <a href="#"><img src="assets/img/bettercallsaul.png" alt="" class="rounded"></a>
+                        </div>
+
+                        <div class="pics">
+                            <a href="#"><img src="assets/img/disenchantment.png" alt="" class="rounded"></a>
+                        </div>
+                    </div> 
+            </div>
+
+            <!-- arrow right -->
+            <div class="absolute right-0">
+                <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+            </div>
+
+        </div>
+
+    </div>   
+
+    <div class="pl-16 py-8">
+      <p class="py-2 font-semibold text-xl">Trending Nows</p>
+      <div class="flex items-center relative">
+
+          <!-- arrow left -->
+          <div class="absolute left-0">
+              <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+          </div>
+
+          <div class="container-carousel">
+              <div class="carousel grid gap-2">
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/batmanbegins.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/narcos.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/iamlegend.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/interstellar.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/rickandmorty.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/lacasadepapel.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/crashlandingonyou.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/tinyprettythings.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/thesevendeadlysins.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/therain.png" alt="" class="rounded"></a>
+                  </div>
+                  </div> 
+          </div>
+
+          <!-- arrow right -->
+          <div class="absolute right-0">
+              <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+          </div>
+
+      </div>
+
+  </div>   
+
+  <div class="pl-16 py-4 text-white">
+      <p class="py-2 font-semibold text-xl">Watch It Again</p>
+      <div class="flex items-center relative">
+
+          <div class="absolute left-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+          </div>
+
+          <div class="container-carousel">
+              <div class="carousel grid gap-2">
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/thedarkknight.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/thelastkingdom.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/blackmirror.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/therevenant.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/titans.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/yesman.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/streetfoodasia.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/thepursuitofhappyness.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/narutothelast.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/whatthehealth.png" alt="" class="rounded"></a>
+                  </div>
+              </div>
+              
+          </div>
+
+          <div class="absolute right-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+          </div>
+      </div>
+      
+  </div>
+
+
+
+
+  <!-- Tv shows by genre -->
+  <div class="px-16 py-4 text-white">
+      <p class="py-2 font-semibold text-xl">TV Shows by Genre</p>
+      <div class="grid gap-2 grid-cols-7">
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Action</a>
+              <img src="assets/img/action.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Anime</a>
+              <img src="assets/img/anime.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Children & Families</a>
+              <img src="assets/img/children.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Comedy</a>
+              <img src="assets/img/comedy.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Docuseries</a>
+              <img src="assets/img/docuseries.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Drama</a>
+              <img src="assets/img/drama.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Fantasy</a>
+              <img src="assets/img/fantasy.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">French</a>
+              <img src="assets/img/french.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Horror</a>
+              <img src="assets/img/horror.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">International</a>
+              <img src="assets/img/international.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Reality</a>
+              <img src="assets/img/reality.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Romance</a>
+              <img src="assets/img/romance.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Sci-Fi</a>
+              <img src="assets/img/sci-fi.png" alt="" class="rounded">
+          </div>
+          <div>
+              <a href="#" class="absolute font-semibold px-2 py-5">Thriller</a>
+              <img src="assets/img/thriller.png" alt="" class="rounded">
+          </div>
+
+
+      </div>
+  </div>
+
+
+
+
+
+  <!-- netflix originals -->
+  <div class="pl-16 py-4 text-white">
+      <p class="py-2 font-semibold text-xl">Netflix Originals</p>
+      <div class="flex items-center relative">
+
+          <div class="absolute left-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+          </div>
+
+          <div class="container-carousel">
+              <div class="carousel grid gap-2">
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/n_blackmirror.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/n_lupin.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/n_3_.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/n_enolaholmes.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/n_thewitcher.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/n_thequeensgambit.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/n_13reasonswhy.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/n_annewithane.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img//n_bridgerton.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/n_aliceinborderland.png" alt="" class="rounded"></a>
+                  </div>
+              </div>
+              
+          </div>
+
+          <div class="absolute right-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+          </div>
+      </div>
+      
+  </div>
+
+  <div class="pl-16 py-4 text-white">
+      <p class="py-2 font-semibold text-xl">Top 10 au Tombouctou</p>
+      <div class="flex items-center relative">
+
+          <div class="absolute left-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+          </div>
+
+          <div class="container-carousel">
+              <div class="carousel grid gap-2">
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/t_lupin.png" alt="" class="rounded w-32 h-44"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/t_sexeducation.png" alt="" class="rounded w-32 h-44"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/t_thequeensgambit.png" alt="" class="rounded w-32 h-44"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/t_thewitcher.png" alt="" class="rounded w-32 h-44"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/t_narcosmexico.png" alt="" class="rounded w-32 h-44"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/t_moneyheist.png" alt="" class="rounded w-32 h-44"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/t_crashlandingonyou.png" alt="" class="rounded w-32 h-44"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/t_outsidethewire.png" alt="" class="rounded w-32 h-44"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/t_riverdale.png" alt="" class="rounded w-32 h-44"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/t_disenchantment.png" alt="" class="rounded w-32 h-44"></a>
+                  </div>
+              </div>
+              
+          </div>
+
+          <div class="absolute right-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+          </div>
+      </div>
+      
+  </div>
+
+  <div class="pl-16 py-4 text-white">
+      <p class="py-2 font-semibold text-xl">New Release</p>
+      <div class="flex items-center relative">
+
+          <div class="absolute left-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+          </div>
+
+          <div class="container-carousel">
+              <div class="carousel grid gap-2">
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/bridgerton.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/split.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/orphanblack.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/split.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/spycraft.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/insidetheworldstoughestprisons.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/dark.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/neverhaveiever.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/dynasty.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/emilyinparis.png" alt="" class="rounded"></a>
+                  </div>
+              </div>
+              
+          </div>
+
+          <div class="absolute right-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+          </div>
+
+      </div>
+  </div>
+  
+    
+
+  <div class="pl-16 py-4 text-white">
+      <p class="py-2 font-semibold text-xl">International TV Shows</p>
+      <div class="flex items-center relative">
+
+          <div class="absolute left-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+          </div>
+
+          <div class="container-carousel">
+              <div class="carousel grid gap-2">
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/therain.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/vforvendetta.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/vikings.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/narcos.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/unorthodox.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/blackcrows.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/recordofyouth.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/ragnarok.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/itsokaytonotbeokay.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/messiah.png" alt="" class="rounded"></a>
+                  </div>
+              </div>
+              
+          </div>
+
+          <div class="absolute right-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+          </div>
+      </div>
+      
+  </div>
+
+  <div class="pl-16 py-4 text-white">
+      <p class="py-2 font-semibold text-xl">Recommandations</p>
+      <div class="flex items-center relative">
+
+          <div class="absolute left-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+          </div>
+
+          <div class="container-carousel">
+              <div class="carousel grid gap-2">
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/darktourist.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/pacificrims.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/deathto2020.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/spiderman.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/brooklynninenine.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/ozark.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/houseofcards.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/madagascar.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/matrix.png" alt="" class="rounded"></a>
+                  </div>
+                  <div class="pics">
+                      <a href="#"><img src="assets/img/vforvendetta.png" alt="" class="rounded"></a>
+                  </div>
+              </div>
+              
+          </div>
+
+          <div class="absolute right-0">
+              <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+          </div>
+      </div>
+      
+  </div>
+
+  <div class="pl-16 py-8">
+    <p class="py-2 font-semibold text-xl">TV Shows</p>
+    <div class="flex items-center relative">
+
+        <!-- arrow left -->
+        <div class="absolute left-0">
+            <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+        </div>
+
+        <div class="container-carousel">
+            <div class="carousel grid gap-2">
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/peakyblinders.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/vikings.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="https://imgix.bustle.com/inverse/8d/2e/cc/37/6ca2/41c7/81cc/8c9a28f2dfbc/cumberbatch-holmesjpg.jpeg?w=1200&h=630&q=70&fit=crop&crop=faces&fm=jpg" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/orangeisthenewblack.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/thewitcher.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/theumbrellaacademy.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/thequeensgambit.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/outlander.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/bettercallsaul.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/disenchantment.png" alt="" class="rounded"></a>
+                    </div>
+                </div> 
+        </div>
+
+        <!-- arrow right -->
+        <div class="absolute right-0">
+            <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+        </div>
+
+    </div>
+
+</div>   
+
+  <div class="pl-16 py-8">
+    <p class="py-2 font-semibold text-xl">TV Shows</p>
+    <div class="flex items-center relative">
+
+        <!-- arrow left -->
+        <div class="absolute left-0">
+            <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+        </div>
+
+        <div class="container-carousel">
+            <div class="carousel grid gap-2">
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/peakyblinders.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/vikings.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/breakingbad.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/orangeisthenewblack.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/thewitcher.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/theumbrellaacademy.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/thequeensgambit.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/outlander.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/bettercallsaul.png" alt="" class="rounded"></a>
+                    </div>
+
+                    <div class="pics">
+                        <a href="#"><img src="assets/img/disenchantment.png" alt="" class="rounded"></a>
+                    </div>
+                </div> 
+        </div>
+
+        <!-- arrow right -->
+        <div class="absolute right-0">
+            <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+        </div>
+
+    </div>
+
+</div>   
+
+  <div class="pl-16 py-4 text-white">
+    <p class="py-2 font-semibold text-xl">Non Disponible sur Netflix</p>
+    <div class="flex items-center relative">
+
+        <div class="absolute left-0">
+            <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+        </div>
+
+        <div class="container-carousel">
+            <div class="carousel grid gap-2">
+                <div class="pics">
+                    <a href="#"><img src="https://www.texasmonthly.com/wp-content/uploads/2018/07/180726_TheOffice-1200x750.jpg" alt="" class="rounded"></a>
+                </div>
+                <div class="pics">
+                    <a href="#"><img src="https://www.hdwallpapers.in/download/mr_robot_fan_art_hd-1366x768.jpg" alt="" class="rounded"></a>
+                </div>
+                <div class="pics">
+                    <a href="#"><img src="https://www.dreadcentral.com/wp-content/uploads/2021/01/Godzilla-vs-Kong-Banner-4.jpg" alt="" class="rounded"></a>
+                </div>
+                <div class="pics">
+                    <a href="#"><img src="https://wallpapercave.com/wp/wp5181569.jpg" alt="" class="rounded"></a>
+                </div>
+                <div class="pics">
+                    <a href="#"><img src="https://wallpaperset.com/w/full/4/5/f/300631.jpg" alt="" class="rounded"></a>
+                </div>
+                <div class="pics">
+                    <a href="#"><img src="assets/img/prisonschool.png" alt="" class="rounded"></a>
+                </div>
+                <div class="pics">
+                    <a href="#"><img src="assets/img/samuraichamploo.png" alt="" class="rounded"></a>
+                </div>
+                <div class="pics">
+                    <a href="#"><img src="assets/img/gate.png" alt="" class="rounded"></a>
+                </div>
+                <div class="pics">
+                    <a href="#"><img src="assets/img/fullmetalalchemist.png" alt="" class="rounded"></a>
+                </div>
+                <div class="pics">
+                    <a href="#"><img src="assets/img/jojosbizarreadventure.png" alt="" class="rounded"></a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="absolute right-0">
+            <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+        </div>
+    </div>
+    
+</div>
+    
+    </section>
+    
+    <footer class="">
+    
+    <div class="flex justify-center">
+      <div class="text-gray-600">
+        <i class="fab fa-facebook-square cursor-pointer mr-4 text-lg"></i>
+        <i class="fab fa-instagram cursor-pointer mr-4 text-lg"></i>
+        <i class="fab fa-twitter cursor-pointer mr-4 text-lg"></i>
+        <i class="fab fa-youtube cursor-pointer mr-4 text-lg"></i>
+      </div>
+
+      <div class="flex mr-10 text-gray-600">
+        <div class="text-gray-600 mr-10">
+           <p class="cursor-pointer hover:underline">Audio et subtitles</p>
+           <p class="cursor-pointer hover:underline">Media Center</p>
+           <p class="cursor-pointer hover:underline">Privacy</p>
+           <p class="cursor-pointer hover:underline">Contact Us</p> 
+            <button class="flex justify-center px-8 mt-5 items-center shadow-md border-2 border-gray-600 bg-black bg-opacity-50 space-x-2 py-2 ">
+        
+        <span class="text-gray-600 font-semibold">Service Code</span>
+    </button>
+        </div>
+
+        <div class="text-gray-600 mr-10">
+          <p class="cursor-pointer hover:underline">Audio Description</p>
+          <p class="cursor-pointer hover:underline">Investor Relations</p>
+          <p class="cursor-pointer hover:underline">Legal Notices</p>
+        </div>
+
+        <div class="text-gray-600 mr-10">
+          <p class="cursor-pointer hover:underline">Help Center</p>
+          <p class="cursor-pointer hover:underline">Jobs</p>
+          <p class="cursor-pointer hover:underline">Cookie Preferences</p>
+        </div>
+
+        <div class="text-gray-600 mr-10">
+          <p class="cursor-pointer hover:underline">Gift Cards</p>
+          <p  class="cursor-pointer hover:underline">Terms of Use</p>
+          <p class="cursor-pointer hover:underline">Corporate Information</p>
+        </div>
+      </div>
+    </div>
+
+    
+      
+    </footer>
+
+  
+    <script src="assets/js/main.js"></script>
+
+   </body>
+</html>
